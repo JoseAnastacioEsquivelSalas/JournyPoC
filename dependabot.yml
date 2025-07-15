@@ -1,0 +1,13 @@
+# .github/dependabot.yml
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"                # Cambia si el package.json está en otro directorio
+    schedule:
+      interval: "weekly"          # Opciones: daily, weekly, monthly
+    open-pull-requests-limit: 5   # (Opcional) Máximo de PRs abiertos por Dependabot
+    allow:
+      - dependency-type: "all"    # "direct", "indirect" o "all"
+    ignore:
+      - dependency-name: "express"
+        versions: [">=5.0.0"]     # Ejemplo: ignora versiones mayores a 5.x de express
